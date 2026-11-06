@@ -1,0 +1,125 @@
+{
+  "cabinetName": "Kabinet Adhirajya",
+  "cabinetSanskrit": "अधिराज्य",
+  "period": "2026",
+  "tagline": "Daya Tercipta, Adhirajya Berjaya",
+  "philosophy": "Adhirajya (अधिराज्य) menegaskan bahwa HMTF merupakan entitas otonom yang memegang kendali penuh atas nasib dan identitasnya sendiri, menolak segala bentuk hegemoni yang tidak selaras dengan nilai organisasi.",
+  "vision": "Mewujudkan HMTF Telkom University sebagai entitas yang mandiri, adaptif terhadap perkembangan teknologi dan akademik, serta berdaulat tanpa meninggalkan nilai-nilai luhur dan jati diri himpunan.",
+  "missions": [
+    "Mengembangkan tata kelola internal organisasi yang profesional, terstruktur, transparan, dan akuntabel.",
+    "Menguatkan sistem kaderisasi bertahap yang berorientasi pada integritas, daya juang, dan kapasitas kepemimpinan.",
+    "Membangun kolaborasi strategis dengan sivitas akademika, alumni, industri, dan jaringan nasional demi memperluas kontribusi Teknik Fisika.",
+    "Memfasilitasi akselerasi keilmuan, keprofesian, dan inovasi teknologi mahasiswa Teknik Fisika.",
+    "Hadir secara aktif dan solutif dalam pengabdian kepada masyarakat dan kelestarian lingkungan."
+  ],
+  "values": [
+    { "title": "Kedaulatan", "desc": "Entitas independen yang teguh pada prinsip dan nilai luhur organisasi." },
+    { "title": "Adaptabilitas", "desc": "Responsif terhadap evolusi sains modern dan kebutuhan zaman tanpa kehilangan akar identitas." },
+    { "title": "Sinergi", "desc": "Kolaborasi harmonis antarelemen internal dan mitra eksternal demi hasil berdampak." },
+    { "title": "Kebermaknaan", "desc": "Tiap karya dan program kerja berakar pada kemanfaatan nyata untuk anggota dan masyarakat." }
+  ],
+  "leadership": [
+    {
+      "role": "Ketua Himpunan",
+      "subtitle": "Pemegang Mandat Kepemimpinan BPH 2026",
+      "description": "Memimpin arah gerak organisasi secara strategis, menjaga kedaulatan himpunan, dan mengayomi seluruh keluarga mahasiswa Teknik Fisika.",
+      "category": "executive"
+    },
+    {
+      "role": "Wakil Bidang Internal",
+      "subtitle": "Kordinasi Soliditas & Operasional Internal",
+      "description": "Menjaga komunikasi yang harmonis, sinergi antardepartemen internal, serta memastikan kesehatan sirkulasi kerja himpunan.",
+      "category": "internal"
+    },
+    {
+      "role": "Wakil Bidang Eksternal",
+      "subtitle": "Kordinasi Diplomasi & Jejaring Luar",
+      "description": "Memperluas relasi strategis, kemitraan antarkampus, jejaring ikatan alumni, dan citra positif HMTF di kancah nasional.",
+      "category": "external"
+    },
+    {
+      "role": "Sekretaris",
+      "subtitle": "Tata Kelola Administrasi & Kesekretariatan",
+      "description": "Mengelola tertib administrasi, korespondensi surat-menyurat, pengarsipan berkas, notulensi, dan standarisasi SOP.",
+      "category": "administration"
+    },
+    {
+      "role": "Bendahara",
+      "subtitle": "Manajemen Keuangan & Anggaran Kas",
+      "description": "Mengawal transparansi sirkulasi dana, pencatatan RAK himpunan, serta pengelolaan modal kegiatan BPH secara profesional.",
+      "category": "finance"
+    },
+    {
+      "role": "Brand Ambassador",
+      "subtitle": "Ikon & Representasi Publik HMTF",
+      "description": "Representasi semangat, daya tarik, dan citra Kabinet Adhirajya kepada khalayak kampus dan masyarakat luas.",
+      "category": "branding"
+    }
+  ],
+  "departments": [
+    {
+      "id": "hublu",
+      "name": "Biro Hubungan Luar (Hublu)",
+      "cluster": "Eksternal",
+      "tagline": "Menjalin relasi, memperluas kontribusi.",
+      "desc": "Membangun jejaring kolaborasi dengan himpunan mahasiswa universitas lain (termasuk forum FKMTFI), perusahaan, dan mengelola ikatan alumni Teknik Fisika Telkom University.",
+      "programs": ["Kunjungan Studi Banding", "Database & Forum Ikatan Alumni TF", "Kemitraan Strategis Eksternal", "Delegasi Forum Nasional FKMTFI"]
+    },
+    {
+      "id": "pengmas",
+      "name": "Biro Pengabdian Masyarakat & LH",
+      "cluster": "Eksternal",
+      "tagline": "Mengabdi untuk masyarakat, menjaga masa depan.",
+      "desc": "Membawa keilmuan dan kepedulian mahasiswa Teknik Fisika ke ranah nyata melalui aksi sosial, edukasi teknologi ramah lingkungan, dan tanggap kebencanaan.",
+      "programs": ["TF SINA (Teknik Fisika Sigap Bencana)", "Bakti Desa Berkelanjutan", "Kampanye Peduli Lingkungan & Daur Ulang", "Pemberdayaan Masyarakat Sekitar"]
+    },
+    {
+      "id": "kaderisasi",
+      "name": "Departemen Kaderisasi",
+      "cluster": "Internal",
+      "tagline": "Membentuk karakter, menyemai penerus estafet.",
+      "desc": "Merancang dan mengeksekusi alur kaderisasi bertahap yang membentuk kedisiplinan, rasa memiliki terhadap almamater, dan kesiapan kepemimpinan generasi baru.",
+      "programs": ["Kalibrasi (Kaderisasi Mahasiswa Baru)", "Pra-Event Pembekalan Nilai Himpunan", "Mentoring & Penanaman Budaya Grey Warrior"]
+    },
+    {
+      "id": "pao",
+      "name": "Departemen PAO",
+      "cluster": "Internal",
+      "tagline": "Kawal integritas, rekatkan aparatur himpunan.",
+      "desc": "Bertanggung jawab atas efektivitas kinerja pengurus, evaluasi periodik, penyusunan buku pedoman, serta keharmonisan internal pengurus.",
+      "programs": ["BULU (Buku Evaluasi Pengurus)", "Makrab & Upgrading BPH Adhirajya", "Survei Kepuasan Internal Pengurus"]
+    },
+    {
+      "id": "akademik",
+      "name": "Departemen Akademik & Keprofesian",
+      "cluster": "Internal",
+      "tagline": "Mendorong prestasi keilmuan dan keprofesian unggul.",
+      "desc": "Menjembatani kebutuhan akademik mahasiswa, memfasilitasi arsip soal ujian, tutorial mata kuliah sulit, dan persiapan Pekan Tugas Besar.",
+      "programs": ["Bank Soal Terintegrasi UTS/UAS", "Responsi & Tutorial Sebaya", "Workshop Software Rekayasa (MATLAB/Python/COMSOL)", "Pendampingan Pekan Tubes"]
+    },
+    {
+      "id": "kominfo",
+      "name": "Departemen Komunikasi & Informasi",
+      "cluster": "Eksternal",
+      "tagline": "Kreativitas visual, corong informasi himpunan.",
+      "desc": "Mengelola seluruh platform digital, produksi konten visual dan audio-visual, website himpunan, serta penyusunan e-magazine.",
+      "programs": ["Manajemen Akun Media Sosial Resmi", "Publikasi Buletin / E-Magazine", "Pengembangan Website Resmi HMTF", "Liputan & Dokumentasi Event Himpunan"]
+    },
+    {
+      "id": "kemahasiswaan",
+      "name": "Departemen Kemahasiswaan & Logistik",
+      "cluster": "Internal",
+      "tagline": "Fasilitator rumah bersama, perayaan kekeluargaan.",
+      "desc": "Mengelola perawatan ruang sekretariat dan aset inventaris, serta menyelenggarakan perayaan penting keluarga besar Teknik Fisika.",
+      "programs": ["Parade Wisuda (Graduation Day)", "Bedah & Perawatan Sekre HMTF", "HMTF Day & Welcoming Party", "Peminjaman Aset & Fasilitas Himpunan"]
+    },
+    {
+      "id": "kewirausahaan",
+      "name": "Departemen Kewirausahaan (Ekraf)",
+      "cluster": "Eksternal",
+      "tagline": "Kemandirian finansial, inovasi bernilai tambah.",
+      "desc": "Mengembangkan potensi ekonomi kreatif dan unit usaha mandiri himpunan guna menopang operasional serta menyediakan merchandise identitas.",
+      "programs": ["HMTF Store (Jahim, PDH, Lanyard, Kaos)", "BUMH (Badan Usaha Milik Himpunan)", "Pengadaan Merchandise Parade Wisuda"]
+    }
+  ]
+}
