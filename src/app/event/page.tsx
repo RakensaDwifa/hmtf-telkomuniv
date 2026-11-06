@@ -1,49 +1,47 @@
 import { Metadata } from "next";
 import { 
   Calendar, 
-  Flame, 
-  Trophy, 
   BookOpen, 
   ExternalLink, 
   Camera, 
-  Sparkles,
-  Layers
+  ArrowUpRight
 } from "lucide-react";
 import eventsData from "@/data/events.json";
+import siteConfig from "@/data/site-config.json";
 
 export const metadata: Metadata = {
-  title: "Event & Dokumentasi Galeri",
-  description: "Dokumentasi kegiatan, kompetisi sains Technogine, Pekan Tubes, dan publikasi E-Magazine HMTF Telkom University.",
+  title: "Event, Program Kerja & Buletin HMTF",
+  description: "Dokumentasi agenda, kompetisi sains Technogine, Pekan Tubes, dan publikasi E-Magazine HMTF Telkom University.",
 };
 
 export default function EventPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 space-y-16">
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/20 px-3.5 py-1 text-xs font-semibold text-amber-400">
+    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 space-y-16">
+      {/* Editorial Header */}
+      <div className="border-b border-slate-200 pb-8 space-y-3">
+        <div className="flex items-center gap-2 font-mono text-xs text-orange-600 font-bold uppercase tracking-wider">
           <Camera className="h-4 w-4" />
-          <span>Aktivitas & Publikasi</span>
+          <span>KRONIK & PUBLIKASI // PERIODE {siteConfig.period}</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-          EVENT & <span className="text-amber-400">GALERI HMTF</span>
+        <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          AGENDA & <span className="text-orange-600">PUBLIKASI HMTF</span>
         </h1>
-        <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
-          Arsip program kerja unggulan, kompetisi teknologi berskala nasional, serta dinamika kekeluargaan Grey Warrior Telkom University.
+        <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
+          Dokumentasi program kerja unggulan, kompetisi rekayasa sains berskala nasional, pengabdian masyarakat, dan arsip buletin digital Grey Warrior.
         </p>
       </div>
 
-      {/* EVENT UNGGULAN & PROGRAM KERJA */}
+      {/* AGENDA UTAMA & PROGRAM KERJA */}
       <section className="space-y-6">
-        <div>
-          <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block">
-            Rangkaian Program
+        <div className="border-b border-slate-200 pb-4">
+          <span className="font-mono text-xs font-bold text-orange-600 uppercase tracking-wider block">
+            // RANGKAIAN PROGRAM
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
-            Program Kerja & Agenda Utama
+          <h2 className="text-2xl font-black text-slate-900 mt-1">
+            Program Kerja & Agenda Unggulan
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
-            Ajang pengembangan akademik, tradisi kekeluargaan, dan kontribusi nyata kepada masyarakat.
+          <p className="text-xs text-slate-600 mt-1">
+            Ajang akselerasi keilmuan teknologi, tradisi kekeluargaan, dan kontribusi nyata kepada civitas akademika.
           </p>
         </div>
 
@@ -51,69 +49,68 @@ export default function EventPage() {
           {eventsData.events.map((ev) => (
             <div
               key={ev.id}
-              className="rounded-2xl border border-[#132b4f] bg-[#09172c]/70 p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all shadow-sm"
+              className="rounded border border-slate-200 bg-white p-6 flex flex-col justify-between hover:border-slate-400 transition-colors"
             >
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="inline-block rounded-md bg-amber-500/10 px-2.5 py-0.5 text-[10px] font-bold text-amber-300 border border-amber-500/20">
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-orange-50 text-orange-700 border border-orange-200">
                     {ev.badge}
                   </span>
-                  <span className="text-[10px] text-slate-400">{ev.category}</span>
+                  <span className="font-mono text-[11px] text-slate-400">{ev.category}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">{ev.title}</h3>
-                <p className="text-xs text-amber-400 font-medium mt-0.5 mb-3">{ev.subtitle}</p>
-                <p className="text-xs text-slate-300 leading-relaxed">{ev.description}</p>
+                <h3 className="text-lg font-bold text-slate-900 pt-1">{ev.title}</h3>
+                <p className="font-mono text-xs text-orange-600 font-semibold">{ev.subtitle}</p>
+                <p className="text-xs text-slate-600 leading-relaxed pt-1">{ev.description}</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#132b4f]/80 flex items-center justify-between text-xs text-slate-400">
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-slate-500">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5 text-amber-400" />
+                  <Calendar className="h-3.5 w-3.5 text-slate-400" />
                   {ev.period}
                 </span>
-                <span className="text-[11px] font-semibold text-slate-500">HMTF Tel-U</span>
+                <span className="text-slate-400">TF-TELU</span>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* E-MAGAZINE & BULETIN */}
-      <section className="rounded-3xl border border-[#132b4f] bg-gradient-to-br from-[#09172c] via-[#050d1a] to-[#09172c] p-8 sm:p-12 space-y-6">
-        <div>
-          <span className="inline-flex items-center gap-2 rounded-md bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 border border-amber-500/20 mb-3">
-            <BookOpen className="h-3.5 w-3.5" />
-            <span>Kajian & Publikasi</span>
+      {/* E-MAGAZINE & BULETIN MAHASISWA */}
+      <section className="rounded-lg border border-slate-200 bg-white p-6 sm:p-10 space-y-6">
+        <div className="border-b border-slate-200 pb-4">
+          <span className="font-mono text-xs font-bold text-orange-600 uppercase tracking-wider block">
+            // KAJIAN & MEDIA CETAK DIGITAL
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-            E-Magazine & Buletin Mahasiswa
+          <h2 className="text-2xl font-black text-slate-900 mt-1">
+            E-Magazine & Buletin Himpunan
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-xl">
-            Majalah digital berkala yang mengulas seputar inovasi riset Teknik Fisika, profil alumni berprestasi, dan dinamika keorganisasian.
+          <p className="text-xs text-slate-600 mt-1 max-w-2xl">
+            Majalah digital berkala Departemen Komunikasi & Informasi yang mengulas terobosan riset Teknik Fisika, profil alumni berprestasi, dan dinamika keorganisasian.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {eventsData.publications.map((pub, idx) => (
             <div
               key={idx}
-              className="rounded-xl border border-[#132b4f] bg-[#050d1a] p-6 flex flex-col justify-between"
+              className="rounded border border-slate-200 bg-slate-50 p-6 flex flex-col justify-between"
             >
-              <div>
-                <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block mb-1">
-                  {pub.edition}
+              <div className="space-y-2">
+                <span className="font-mono text-xs font-bold text-orange-600 uppercase tracking-wider block">
+                  [{pub.edition}]
                 </span>
-                <h3 className="text-base font-bold text-white">{pub.title}</h3>
-                <p className="text-xs text-slate-300 mt-2 leading-relaxed">{pub.description}</p>
+                <h3 className="text-base font-bold text-slate-900">{pub.title}</h3>
+                <p className="text-xs text-slate-600 leading-relaxed">{pub.description}</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#132b4f]">
+              <div className="mt-6 pt-4 border-t border-slate-200">
                 <a
                   href={pub.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-amber-400 hover:text-amber-300"
+                  className="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-900 hover:text-orange-600 transition-colors"
                 >
-                  <span>Baca Buletin di Google Drive</span>
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <span>Buka Buletin di Google Drive</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-orange-500" />
                 </a>
               </div>
             </div>
@@ -121,24 +118,25 @@ export default function EventPage() {
         </div>
       </section>
 
-      {/* SOCIAL MEDIA FEED CALLOUT */}
-      <section className="rounded-2xl border border-[#132b4f] bg-[#09172c]/60 p-8 text-center space-y-3">
-        <Sparkles className="h-7 w-7 text-amber-400 mx-auto" />
-        <h3 className="text-lg font-bold text-white">Ikuti Liputan Kegiatan Terbaru Kami</h3>
-        <p className="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto">
-          Foto dokumentasi Parade Wisuda, liputan pengabdian masyarakat, dan pengumuman lomba diunggah secara berkala di akun Instagram resmi himpunan.
-        </p>
-        <div className="pt-2">
-          <a
-            href="https://www.instagram.com/hmtftelkomuniv"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#09172c] border border-[#132b4f] px-5 py-2.5 text-xs font-bold text-white hover:border-amber-500/40 transition-all"
-          >
-            <span>Buka Instagram @hmtftelkomuniv</span>
-            <ExternalLink className="h-3.5 w-3.5 text-amber-400" />
-          </a>
+      {/* SOCIAL MEDIA DISPATCH */}
+      <section className="rounded border border-slate-200 bg-slate-50 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div className="space-y-1 max-w-xl">
+          <h3 className="text-base font-bold text-slate-900">
+            Liputan & Foto Dokumentasi Kegiatan Terkini
+          </h3>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Dokumentasi Parade Wisuda, live report kompetisi, pengabdian masyarakat, dan pengumuman lomba diunggah secara reguler di kanal media sosial resmi.
+          </p>
         </div>
+        <a
+          href={siteConfig.contact.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded bg-slate-900 px-4 py-2.5 text-xs font-mono font-bold text-white uppercase tracking-wider hover:bg-orange-600 transition-colors shrink-0"
+        >
+          <span>Instagram @hmtftelkomuniv</span>
+          <ArrowUpRight className="h-3.5 w-3.5 text-orange-400" />
+        </a>
       </section>
     </div>
   );
