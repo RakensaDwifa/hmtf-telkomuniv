@@ -1,19 +1,18 @@
 import Link from "next/link";
-import { Atom, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import Logo from "@/components/Logo";
 import { InstagramIcon, YoutubeIcon, LinkedinIcon } from "@/components/Icons";
 import siteConfig from "@/data/site-config.json";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800/80 bg-slate-950 text-slate-300">
+    <footer className="border-t border-[#132b4f] bg-[#030812] text-slate-300">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Col 1: Identity */}
+          {/* Col 1: Identity & Official Logo */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
-                <Atom className="h-6 w-6" />
-              </div>
+            <div className="flex items-center gap-3.5">
+              <Logo size={46} />
               <div>
                 <span className="text-lg font-bold text-white block">HMTF Telkom Univ</span>
                 <span className="text-xs text-amber-400 font-semibold tracking-wide uppercase">
@@ -21,20 +20,20 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
               {siteConfig.description}
             </p>
-            <div className="inline-block rounded-md bg-slate-900 border border-slate-800 px-3 py-1.5 text-xs font-semibold text-amber-300">
+            <div className="inline-block rounded-md bg-[#09172c] border border-[#132b4f] px-3 py-1.5 text-xs font-semibold text-amber-300">
               {siteConfig.tagline} • {siteConfig.hashtag}
             </div>
           </div>
 
           {/* Col 2: Navigation */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              Navigasi Cepat
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+              Navigasi Himpunan
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               {siteConfig.navItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -48,12 +47,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Layanan Akademik & Kemahasiswaan */}
+          {/* Col 3: Layanan Mahasiswa */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Layanan Mahasiswa
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/akademik" className="text-slate-400 hover:text-amber-400 transition-colors">
                   Bank Soal UTS & UAS
@@ -61,7 +60,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/akademik" className="text-slate-400 hover:text-amber-400 transition-colors">
-                  Info 5 Laboratorium TF
+                  5 Laboratorium Riset TF
                 </Link>
               </li>
               <li>
@@ -90,7 +89,7 @@ export default function Footer() {
 
           {/* Col 4: Kontak & Sekretariat */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Sekretariat & Kontak
             </h3>
             <div className="space-y-3 text-xs text-slate-400">
@@ -115,7 +114,7 @@ export default function Footer() {
                   href={siteConfig.contact.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-8 w-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-colors"
+                  className="h-8 w-8 rounded-lg bg-[#09172c] border border-[#132b4f] flex items-center justify-center text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-colors"
                   aria-label="Instagram"
                 >
                   <InstagramIcon className="h-4 w-4" />
@@ -124,7 +123,7 @@ export default function Footer() {
                   href={siteConfig.contact.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-8 w-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-colors"
+                  className="h-8 w-8 rounded-lg bg-[#09172c] border border-[#132b4f] flex items-center justify-center text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-colors"
                   aria-label="YouTube"
                 >
                   <YoutubeIcon className="h-4 w-4" />
@@ -133,7 +132,7 @@ export default function Footer() {
                   href={siteConfig.contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-8 w-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-colors"
+                  className="h-8 w-8 rounded-lg bg-[#09172c] border border-[#132b4f] flex items-center justify-center text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-colors"
                   aria-label="LinkedIn"
                 >
                   <LinkedinIcon className="h-4 w-4" />
@@ -144,14 +143,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="mt-12 border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+        <div className="mt-12 border-t border-[#132b4f] pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
           <p>
             © {siteConfig.period} {siteConfig.name}. Departemen Komunikasi & Informasi {siteConfig.cabinet}.
           </p>
           <div className="flex items-center gap-3">
             <span>Grey Warrior Pride</span>
             <span>•</span>
-            <span className="text-amber-500/80 font-semibold">{siteConfig.hashtag}</span>
+            <span className="text-amber-400 font-semibold">{siteConfig.hashtag}</span>
           </div>
         </div>
       </div>

@@ -1,18 +1,16 @@
 import Link from "next/link";
 import { 
-  Atom, 
   ArrowRight, 
   ShieldCheck, 
   BookOpen, 
   Users, 
   Sparkles, 
   MessageSquare, 
-  Layers, 
   ChevronRight,
-  Flame,
   Award,
   Calendar
 } from "lucide-react";
+import Logo from "@/components/Logo";
 import siteConfig from "@/data/site-config.json";
 import bphData from "@/data/bph.json";
 import academicData from "@/data/akademik.json";
@@ -22,14 +20,19 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-20 pb-20">
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24 border-b border-slate-800/60 bg-gradient-to-b from-slate-900/50 via-slate-950 to-slate-950">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent -z-10" />
+      <section className="relative overflow-hidden pt-16 pb-16 lg:pt-24 lg:pb-24 border-b border-[#132b4f] bg-gradient-to-b from-[#09172c]/60 via-[#050d1a] to-[#050d1a]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/15 via-transparent to-transparent -z-10" />
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-6">
             
+            {/* Center Logo with Glow */}
+            <div className="mb-2">
+              <Logo size={96} className="shadow-2xl shadow-amber-500/10" />
+            </div>
+
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-900 border border-amber-500/30 px-4 py-1.5 shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#09172c] border border-amber-500/30 px-4 py-1.5 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-ping" />
               <span className="text-xs font-semibold text-amber-300 tracking-wide uppercase">
                 {bphData.cabinetName} ({bphData.cabinetSanskrit}) • Periode {siteConfig.period}
@@ -39,7 +42,7 @@ export default function HomePage() {
             {/* Main Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
               HIMPUNAN MAHASISWA <br />
-              <span className="bg-gradient-to-r from-slate-100 via-amber-300 to-amber-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-amber-300 to-orange-400 bg-clip-text text-transparent">
                 TEKNIK FISIKA
               </span>
             </h1>
@@ -54,7 +57,7 @@ export default function HomePage() {
             </p>
 
             {/* Slogan pill */}
-            <div className="rounded-lg bg-slate-900/80 border border-slate-800 px-4 py-2 text-sm font-semibold text-slate-200">
+            <div className="rounded-xl bg-[#09172c]/90 border border-[#132b4f] px-5 py-2.5 text-sm font-semibold text-slate-200">
               <span className="text-amber-400">”{siteConfig.tagline}”</span> — <span className="text-slate-400">{siteConfig.hashtag}</span>
             </div>
 
@@ -62,7 +65,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <Link
                 href="/bph"
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-amber-500 transition-all active:scale-95"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-orange-400 transition-all active:scale-95"
               >
                 <span>Struktur BPH Adhirajya</span>
                 <ArrowRight className="h-4 w-4" />
@@ -70,7 +73,7 @@ export default function HomePage() {
               
               <Link
                 href="/akademik"
-                className="inline-flex items-center gap-2 rounded-xl bg-slate-900 border border-slate-800 px-6 py-3 text-sm font-semibold text-slate-200 hover:border-amber-500/40 hover:text-white transition-all active:scale-95"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#09172c] border border-[#132b4f] px-6 py-3 text-sm font-semibold text-slate-200 hover:border-amber-500/40 hover:text-white transition-all active:scale-95"
               >
                 <BookOpen className="h-4 w-4 text-amber-400" />
                 <span>Bank Soal & Riset</span>
@@ -78,9 +81,9 @@ export default function HomePage() {
 
               <Link
                 href="/aspirasi"
-                className="inline-flex items-center gap-2 rounded-xl bg-slate-900/60 border border-slate-800 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-700 hover:text-white transition-all active:scale-95"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#09172c]/60 border border-[#132b4f] px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-700 hover:text-white transition-all active:scale-95"
               >
-                <MessageSquare className="h-4 w-4 text-sky-400" />
+                <MessageSquare className="h-4 w-4 text-amber-400" />
                 <span>Kotak Aspirasi</span>
               </Link>
             </div>
@@ -88,20 +91,20 @@ export default function HomePage() {
 
           {/* Quick Metrics Strip */}
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 text-center">
+            <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/60 p-4 text-center">
               <div className="text-2xl sm:text-3xl font-black text-white">{siteConfig.established.split(" ")[2]}</div>
               <div className="text-xs text-slate-400 mt-1">Tahun Berdiri HMTF</div>
             </div>
-            <div className="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 text-center">
+            <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/60 p-4 text-center">
               <div className="text-2xl sm:text-3xl font-black text-amber-400">8+</div>
               <div className="text-xs text-slate-400 mt-1">Departemen & Biro BPH</div>
             </div>
-            <div className="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 text-center">
-              <div className="text-2xl sm:text-3xl font-black text-sky-400">5</div>
+            <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/60 p-4 text-center">
+              <div className="text-2xl sm:text-3xl font-black text-amber-400">5</div>
               <div className="text-xs text-slate-400 mt-1">Laboratorium Riset Inti</div>
             </div>
-            <div className="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 text-center">
-              <div className="text-2xl sm:text-3xl font-black text-emerald-400">100%</div>
+            <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/60 p-4 text-center">
+              <div className="text-2xl sm:text-3xl font-black text-white">100%</div>
               <div className="text-xs text-slate-400 mt-1">Kedaulatan Grey Warrior</div>
             </div>
           </div>
@@ -127,7 +130,7 @@ export default function HomePage() {
                 href="/tentang-kami"
                 className="text-xs font-bold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1 group"
               >
-                <span>Pelajari sejarah lengkap HMTF</span>
+                <span>Pelajari makna logo & sejarah HMTF</span>
                 <ChevronRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -137,9 +140,9 @@ export default function HomePage() {
             {bphData.values.map((val, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-amber-500/30 transition-colors"
+                className="rounded-2xl border border-[#132b4f] bg-[#09172c]/70 p-5 hover:border-amber-500/40 transition-colors"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400 mb-3 font-bold text-sm">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400 mb-3 font-bold text-sm border border-amber-500/20">
                   0{idx + 1}
                 </div>
                 <h3 className="text-base font-bold text-white mb-1.5">{val.title}</h3>
@@ -174,19 +177,19 @@ export default function HomePage() {
           {bphData.leadership.slice(0, 3).map((lead, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-900/80 to-slate-950 p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all shadow-sm"
+              className="rounded-2xl border border-[#132b4f] bg-gradient-to-b from-[#09172c] to-[#050d1a] p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all shadow-sm"
             >
               <div>
                 <div className="inline-flex items-center rounded-md bg-amber-500/10 px-2.5 py-1 text-[11px] font-semibold text-amber-400 mb-4 border border-amber-500/20">
                   {lead.category.toUpperCase()}
                 </div>
                 <h3 className="text-xl font-bold text-white">{lead.role}</h3>
-                <p className="text-xs text-amber-400/90 font-medium mt-0.5">{lead.subtitle}</p>
+                <p className="text-xs text-amber-400 font-medium mt-0.5">{lead.subtitle}</p>
                 <p className="text-xs text-slate-400 mt-3 leading-relaxed">{lead.description}</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-500">
+              <div className="mt-6 pt-4 border-t border-[#132b4f] flex items-center justify-between text-xs text-slate-500">
                 <span>Kabinet Adhirajya</span>
-                <span>2026</span>
+                <span className="text-amber-400 font-semibold">2026</span>
               </div>
             </div>
           ))}
@@ -195,9 +198,9 @@ export default function HomePage() {
 
       {/* LAYANAN AKADEMIK & BANK SOAL HIGHLIGHT */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/50 to-slate-950 p-8 sm:p-12 relative overflow-hidden">
+        <div className="rounded-3xl border border-[#132b4f] bg-gradient-to-br from-[#09172c] via-[#09172c]/60 to-[#050d1a] p-8 sm:p-12 relative overflow-hidden">
           <div className="max-w-2xl space-y-4">
-            <span className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 border border-sky-500/20 px-3 py-1 text-xs font-semibold text-sky-400">
+            <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-1 text-xs font-semibold text-amber-400">
               <BookOpen className="h-3.5 w-3.5" />
               <span>Portal Akademik Mahasiswa</span>
             </span>
@@ -210,14 +213,14 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
                 href="/akademik"
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-2.5 text-xs font-bold text-slate-950 hover:bg-sky-400 transition-all shadow"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-5 py-2.5 text-xs font-bold text-slate-950 hover:from-amber-400 hover:to-orange-400 transition-all shadow"
               >
                 <span>Buka Repositori Bank Soal</span>
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <Link
                 href="/akademik"
-                className="inline-flex items-center gap-2 rounded-xl bg-slate-800 px-5 py-2.5 text-xs font-semibold text-slate-200 hover:bg-slate-700 transition-all"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#09172c] border border-[#132b4f] px-5 py-2.5 text-xs font-semibold text-slate-200 hover:text-white transition-all"
               >
                 <span>Lihat 5 Laboratorium TF</span>
               </Link>
@@ -244,17 +247,17 @@ export default function HomePage() {
           {eventsData.events.slice(0, 3).map((event) => (
             <div
               key={event.id}
-              className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 flex flex-col justify-between hover:border-slate-700 transition-all"
+              className="rounded-2xl border border-[#132b4f] bg-[#09172c]/50 p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all"
             >
               <div>
-                <span className="inline-block rounded-md bg-slate-800 px-2.5 py-1 text-[10px] font-semibold text-amber-300 mb-3">
+                <span className="inline-block rounded-md bg-[#050d1a] border border-[#132b4f] px-2.5 py-1 text-[10px] font-semibold text-amber-300 mb-3">
                   {event.badge}
                 </span>
                 <h3 className="text-lg font-bold text-white">{event.title}</h3>
                 <p className="text-xs text-slate-400 font-medium mb-3">{event.subtitle}</p>
                 <p className="text-xs text-slate-300 leading-relaxed">{event.description}</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
+              <div className="mt-6 pt-4 border-t border-[#132b4f] flex items-center justify-between text-[11px] text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="h-3.5 w-3.5 text-amber-400" />
                   {event.period}
@@ -278,7 +281,7 @@ export default function HomePage() {
 
       {/* KOTAK ASPIRASI BANNER */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-amber-500/20 bg-gradient-to-r from-slate-900 via-amber-950/20 to-slate-900 p-8 sm:p-12 text-center space-y-4">
+        <div className="rounded-3xl border border-amber-500/25 bg-gradient-to-r from-[#09172c] via-[#0b1b36] to-[#09172c] p-8 sm:p-12 text-center space-y-4">
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/30">
             <MessageSquare className="h-6 w-6" />
           </div>
@@ -291,7 +294,7 @@ export default function HomePage() {
           <div className="pt-2">
             <Link
               href="/aspirasi"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-amber-500 transition-all"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-orange-400 transition-all"
             >
               <span>Buka Kotak Aspirasi Mahasiswa</span>
               <ArrowRight className="h-4 w-4" />

@@ -41,7 +41,7 @@ export default function AspirasiPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Form Column */}
-        <div className="md:col-span-8 rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8 backdrop-blur-sm">
+        <div className="md:col-span-8 rounded-3xl border border-[#132b4f] bg-[#09172c]/70 p-6 sm:p-8 backdrop-blur-sm">
           {submitted ? (
             <div className="py-12 text-center space-y-4">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
@@ -64,7 +64,7 @@ export default function AspirasiPage() {
                       isAnonymous: false,
                     });
                   }}
-                  className="rounded-xl bg-slate-800 border border-slate-700 px-5 py-2 text-xs font-bold text-slate-200 hover:text-white"
+                  className="rounded-xl bg-[#09172c] border border-[#132b4f] px-5 py-2 text-xs font-bold text-slate-200 hover:text-white"
                 >
                   Kirim Aspirasi Lain
                 </button>
@@ -73,7 +73,7 @@ export default function AspirasiPage() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Checkbox Anonim */}
-              <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3.5 flex items-center justify-between">
+              <div className="rounded-xl border border-[#132b4f] bg-[#050d1a] p-3.5 flex items-center justify-between">
                 <div>
                   <span className="text-xs font-bold text-white block">Kirim secara Anonim?</span>
                   <span className="text-[11px] text-slate-400 block">Identitas nama dan NIM tidak akan ditampilkan</span>
@@ -83,7 +83,7 @@ export default function AspirasiPage() {
                   id="anonymous"
                   checked={formData.isAnonymous}
                   onChange={(e) => setFormData({ ...formData, isAnonymous: e.target.checked })}
-                  className="h-4 w-4 rounded border-slate-700 bg-slate-800 text-amber-500 focus:ring-amber-500"
+                  className="h-4 w-4 rounded border-[#132b4f] bg-[#050d1a] text-amber-500 focus:ring-amber-500"
                 />
               </div>
 
@@ -98,7 +98,7 @@ export default function AspirasiPage() {
                       placeholder="Masukkan nama..."
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none"
+                      className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -110,7 +110,7 @@ export default function AspirasiPage() {
                       placeholder="1101xxxxxx"
                       value={formData.nim}
                       onChange={(e) => setFormData({ ...formData, nim: e.target.value })}
-                      className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none"
+                      className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export default function AspirasiPage() {
                   <select
                     value={formData.batch}
                     onChange={(e) => setFormData({ ...formData, batch: e.target.value })}
-                    className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3.5 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                    className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none"
                   >
                     <option value="2026">Angkatan 2026</option>
                     <option value="2025">Angkatan 2025</option>
@@ -141,7 +141,7 @@ export default function AspirasiPage() {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3.5 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                    className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none"
                   >
                     <option value="Akademik & Perkuliahan">Akademik & Perkuliahan</option>
                     <option value="Fasilitas & Laboratorium">Fasilitas & Laboratorium</option>
@@ -162,13 +162,13 @@ export default function AspirasiPage() {
                   placeholder="Tuliskan pesanmu dengan jelas, objektif, dan konstruktif..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none resize-none"
+                  className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-amber-500 transition-all active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-orange-400 transition-all active:scale-95"
               >
                 <Send className="h-4 w-4" />
                 <span>Kirim Aspirasi Sekarang</span>
@@ -179,7 +179,7 @@ export default function AspirasiPage() {
 
         {/* Sidebar Info Column */}
         <div className="md:col-span-4 space-y-4">
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-3">
+          <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/70 p-5 space-y-3">
             <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block">
               Prinsip Penyaluran
             </span>
@@ -189,8 +189,8 @@ export default function AspirasiPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-3">
-            <span className="text-xs font-bold text-sky-400 uppercase tracking-wider block">
+          <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/70 p-5 space-y-3">
+            <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block">
               Advokasi Mendesak?
             </span>
             <h3 className="text-base font-bold text-white">Hubungi Kami Langsung</h3>

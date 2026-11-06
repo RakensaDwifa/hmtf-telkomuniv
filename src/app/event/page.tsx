@@ -51,7 +51,7 @@ export default function EventPage() {
           {eventsData.events.map((ev) => (
             <div
               key={ev.id}
-              className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all shadow-sm"
+              className="rounded-2xl border border-[#132b4f] bg-[#09172c]/70 p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all shadow-sm"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -65,7 +65,7 @@ export default function EventPage() {
                 <p className="text-xs text-slate-300 leading-relaxed">{ev.description}</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <div className="mt-6 pt-4 border-t border-[#132b4f]/80 flex items-center justify-between text-xs text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="h-3.5 w-3.5 text-amber-400" />
                   {ev.period}
@@ -78,7 +78,7 @@ export default function EventPage() {
       </section>
 
       {/* E-MAGAZINE & BULETIN */}
-      <section className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/60 to-slate-950 p-8 sm:p-12 space-y-6">
+      <section className="rounded-3xl border border-[#132b4f] bg-gradient-to-br from-[#09172c] via-[#050d1a] to-[#09172c] p-8 sm:p-12 space-y-6">
         <div>
           <span className="inline-flex items-center gap-2 rounded-md bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 border border-amber-500/20 mb-3">
             <BookOpen className="h-3.5 w-3.5" />
@@ -96,7 +96,7 @@ export default function EventPage() {
           {eventsData.publications.map((pub, idx) => (
             <div
               key={idx}
-              className="rounded-xl border border-slate-800/80 bg-slate-900/80 p-6 flex flex-col justify-between"
+              className="rounded-xl border border-[#132b4f] bg-[#050d1a] p-6 flex flex-col justify-between"
             >
               <div>
                 <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block mb-1">
@@ -105,7 +105,7 @@ export default function EventPage() {
                 <h3 className="text-base font-bold text-white">{pub.title}</h3>
                 <p className="text-xs text-slate-300 mt-2 leading-relaxed">{pub.description}</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-800">
+              <div className="mt-6 pt-4 border-t border-[#132b4f]">
                 <a
                   href={pub.link}
                   target="_blank"
@@ -122,7 +122,7 @@ export default function EventPage() {
       </section>
 
       {/* SOCIAL MEDIA FEED CALLOUT */}
-      <section className="rounded-2xl border border-slate-800 bg-slate-900/40 p-8 text-center space-y-3">
+      <section className="rounded-2xl border border-[#132b4f] bg-[#09172c]/60 p-8 text-center space-y-3">
         <Sparkles className="h-7 w-7 text-amber-400 mx-auto" />
         <h3 className="text-lg font-bold text-white">Ikuti Liputan Kegiatan Terbaru Kami</h3>
         <p className="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto">
@@ -133,7 +133,7 @@ export default function EventPage() {
             href="https://www.instagram.com/hmtftelkomuniv"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-800 border border-slate-700 px-5 py-2.5 text-xs font-bold text-white hover:border-amber-500/40 transition-all"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#09172c] border border-[#132b4f] px-5 py-2.5 text-xs font-bold text-white hover:border-amber-500/40 transition-all"
           >
             <span>Buka Instagram @hmtftelkomuniv</span>
             <ExternalLink className="h-3.5 w-3.5 text-amber-400" />
