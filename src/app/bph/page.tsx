@@ -33,7 +33,7 @@ export default function BphPage() {
         <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
           {bphData.philosophy}
         </p>
-        <div className="inline-block rounded-lg bg-slate-900 border border-slate-800 px-4 py-1.5 text-xs font-semibold text-amber-300">
+        <div className="inline-block rounded-lg bg-[#09172c] border border-[#132b4f] px-4 py-1.5 text-xs font-semibold text-amber-300">
           ”{bphData.tagline}”
         </div>
       </div>
@@ -41,7 +41,7 @@ export default function BphPage() {
       {/* VISI & MISI */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Visi */}
-        <div className="lg:col-span-5 rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/60 to-slate-950 p-6 sm:p-8 flex flex-col justify-between">
+        <div className="lg:col-span-5 rounded-2xl border border-[#132b4f] bg-gradient-to-br from-slate-900 via-slate-900/60 to-slate-950 p-6 sm:p-8 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2.5 text-amber-400 mb-4">
               <Compass className="h-5 w-5" />
@@ -54,14 +54,14 @@ export default function BphPage() {
               ”{bphData.vision}”
             </p>
           </div>
-          <div className="mt-8 pt-4 border-t border-slate-800 text-xs text-slate-500 flex items-center justify-between">
+          <div className="mt-8 pt-4 border-t border-[#132b4f] text-xs text-slate-500 flex items-center justify-between">
             <span>BPH HMTF Periode 2026</span>
             <span className="text-amber-400/90 font-medium">{siteConfig.hashtag}</span>
           </div>
         </div>
 
         {/* Misi */}
-        <div className="lg:col-span-7 rounded-2xl border border-slate-800 bg-slate-900/40 p-6 sm:p-8">
+        <div className="lg:col-span-7 rounded-2xl border border-[#132b4f] bg-[#09172c]/40 p-6 sm:p-8">
           <div className="flex items-center gap-2.5 text-amber-400 mb-4">
             <Target className="h-5 w-5" />
             <span className="text-xs font-bold uppercase tracking-wider">Misi Utama</span>
@@ -100,7 +100,7 @@ export default function BphPage() {
           {bphData.leadership.map((lead, idx) => (
             <div
               key={idx}
-              className="rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-900/70 to-slate-950 p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all shadow-sm"
+              className="rounded-2xl border border-[#132b4f] bg-gradient-to-b from-slate-900/70 to-slate-950 p-6 flex flex-col justify-between hover:border-amber-500/30 transition-all shadow-sm"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -113,7 +113,7 @@ export default function BphPage() {
                 <p className="text-xs text-amber-400 font-medium mt-0.5">{lead.subtitle}</p>
                 <p className="text-xs text-slate-400 mt-3 leading-relaxed">{lead.description}</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500">
+              <div className="mt-6 pt-4 border-t border-[#132b4f]/80 flex items-center justify-between text-[11px] text-slate-500">
                 <span>HMTF Adhirajya</span>
                 <span>2026</span>
               </div>
@@ -140,7 +140,7 @@ export default function BphPage() {
           {bphData.departments.map((dept) => (
             <div
               key={dept.id}
-              className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 flex flex-col justify-between hover:border-slate-700 transition-all"
+              className="rounded-2xl border border-[#132b4f] bg-[#09172c]/50 p-6 flex flex-col justify-between hover:border-slate-700 transition-all"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -154,7 +154,7 @@ export default function BphPage() {
                 <p className="text-xs text-slate-300 mt-3 leading-relaxed">{dept.desc}</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-800/70">
+              <div className="mt-6 pt-4 border-t border-[#132b4f]/70">
                 <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2">
                   Program Kerja Utama:
                 </span>
@@ -173,7 +173,7 @@ export default function BphPage() {
       </section>
 
       {/* STRUKTUR ORGANISASI VISUAL BANNER */}
-      <section className="rounded-2xl border border-slate-800 bg-slate-900/40 p-8 text-center space-y-3">
+      <section className="rounded-2xl border border-[#132b4f] bg-[#09172c]/40 p-8 text-center space-y-3">
         <Network className="h-8 w-8 text-amber-400 mx-auto" />
         <h3 className="text-lg font-bold text-white">Prinsip Koordinasi BPH 2026</h3>
         <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto leading-relaxed">

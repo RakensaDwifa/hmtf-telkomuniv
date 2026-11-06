@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
+  --background: #050d1a;
   --foreground: #f8fafc;
+  --hmtf-navy-dark: #050d1a;
+  --hmtf-navy-card: #09172c;
+  --hmtf-navy-border: #132b4f;
+  --hmtf-orange: #e8952f;
+  --hmtf-orange-hover: #d97706;
+  --hmtf-silver: #dce3ed;
 }
 
 body {
-  background-color: #020617;
+  background-color: #050d1a;
   color: #f8fafc;
 }

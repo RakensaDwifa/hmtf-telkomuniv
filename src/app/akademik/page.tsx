@@ -45,10 +45,10 @@ export default function AcademicPage() {
       </div>
 
       {/* REPOSITORI BANK SOAL (HIGHLIGHT UTAMA) */}
-      <section className="rounded-3xl border border-sky-500/30 bg-gradient-to-br from-slate-900 via-sky-950/20 to-slate-950 p-8 sm:p-12 relative overflow-hidden">
+      <section className="rounded-3xl border border-amber-500/30 bg-gradient-to-br from-[#09172c] via-[#09172c]/60 to-[#050d1a] p-8 sm:p-12 relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4">
-            <span className="inline-flex items-center gap-2 rounded-md bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-300 border border-sky-500/20">
+            <span className="inline-flex items-center gap-2 rounded-md bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-300 border border-amber-500/20">
               <FolderDown className="h-3.5 w-3.5" />
               <span>Arsip Terpadu Mahasiswa</span>
             </span>
@@ -63,7 +63,7 @@ export default function AcademicPage() {
                 href={academicData.bankSoal.driveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-6 py-3 text-sm font-bold text-slate-950 hover:bg-sky-400 transition-all shadow-md active:scale-95"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-sm font-bold text-slate-950 hover:from-amber-400 hover:to-orange-400 transition-all shadow-md active:scale-95"
               >
                 <FolderDown className="h-4 w-4" />
                 <span>Akses Folder Google Drive Bank Soal</span>
@@ -74,12 +74,12 @@ export default function AcademicPage() {
 
           <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {academicData.bankSoal.categories.map((cat, idx) => (
-              <div key={idx} className="rounded-xl border border-slate-800 bg-slate-900/80 p-4">
-                <h3 className="text-xs font-bold text-sky-400 mb-2">{cat.name}</h3>
+              <div key={idx} className="rounded-xl border border-[#132b4f] bg-[#050d1a] p-4">
+                <h3 className="text-xs font-bold text-amber-400 mb-2">{cat.name}</h3>
                 <ul className="space-y-1 text-[11px] text-slate-300">
                   {cat.items.map((it, i) => (
                     <li key={i} className="flex items-center gap-1.5">
-                      <span className="h-1 w-1 rounded-full bg-sky-400" />
+                      <span className="h-1 w-1 rounded-full bg-amber-400" />
                       <span>{it}</span>
                     </li>
                   ))}
@@ -108,7 +108,7 @@ export default function AcademicPage() {
           {academicData.labs.map((lab, idx) => (
             <div
               key={idx}
-              className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 flex flex-col justify-between hover:border-sky-500/30 transition-all"
+              className="rounded-2xl border border-[#132b4f] bg-[#09172c]/50 p-6 flex flex-col justify-between hover:border-sky-500/30 transition-all"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -120,7 +120,7 @@ export default function AcademicPage() {
                 <h3 className="text-lg font-bold text-white">{lab.name}</h3>
                 <p className="text-xs text-slate-400 mt-2.5 leading-relaxed">{lab.focus}</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500">
+              <div className="mt-6 pt-4 border-t border-[#132b4f] text-[11px] text-slate-500">
                 Fakultas Teknik Elektro Tel-U
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function AcademicPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {academicData.coreSubjects.map((sub, idx) => (
-            <div key={idx} className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
+            <div key={idx} className="rounded-xl border border-[#132b4f] bg-[#09172c]/40 p-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs font-bold text-amber-400">{sub.code}</span>
                 <FileCheck2 className="h-4 w-4 text-slate-500" />
@@ -157,7 +157,7 @@ export default function AcademicPage() {
       </section>
 
       {/* PORTAL PRODI RESMI BANNER */}
-      <section className="rounded-2xl border border-slate-800 bg-slate-900/40 p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section className="rounded-2xl border border-[#132b4f] bg-[#09172c]/40 p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
           <h3 className="text-lg font-bold text-white">Butuh Informasi Resmi Kurikulum & Dosen?</h3>
           <p className="text-xs text-slate-400 mt-1">
