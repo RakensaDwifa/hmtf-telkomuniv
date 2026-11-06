@@ -99,7 +99,7 @@ export default function BphPage() {
               {/* Official Instagram Visual Background with Balanced Dark Scrim Overlay */}
               <div className="absolute inset-0 z-0 overflow-hidden">
                 <Image
-                  src="/images/bph/bph-card-bg.jpg"
+                  src={lead.image || "/images/bph/bph-card-bg.jpg"}
                   alt={`Latar Belakang Resmi ${lead.role} HMTF`}
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -151,7 +151,7 @@ export default function BphPage() {
               {/* Official Instagram Visual Background with Balanced Dark Scrim Overlay */}
               <div className="absolute inset-0 z-0 overflow-hidden">
                 <Image
-                  src="/images/bph/bph-card-bg.jpg"
+                  src={dept.image || "/images/bph/bph-card-bg.jpg"}
                   alt={`Latar Belakang Resmi ${dept.name} HMTF`}
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
