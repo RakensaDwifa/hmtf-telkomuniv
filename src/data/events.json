@@ -1,0 +1,72 @@
+{
+  "events": [
+    {
+      "id": "technogine",
+      "title": "TECHNOGINE",
+      "subtitle": "National Science & Engineering Competition",
+      "badge": "Event Nasional Unggulan",
+      "description": "Ajang kompetisi berskala nasional yang diselenggarakan HMTF Telkom University untuk menguji inovasi rekayasa fisika, robotika, dan teknologi energi terbarukan di kalangan generasi muda Indonesia.",
+      "period": "Tahunan",
+      "category": "Kompetisi & Sains"
+    },
+    {
+      "id": "pekan-tubes",
+      "title": "Pekan Tugas Besar (Pekan Tubes)",
+      "subtitle": "Expo Karya Sains Rekayasa Mahasiswa",
+      "badge": "Akademik & Inovasi",
+      "description": "Pameran karya tugas besar mahasiswa dari berbagai mata kuliah inti Teknik Fisika, mulai dari prototipe alat ukur pintar, sistem otomasi, hingga purwarupa penghematan energi.",
+      "period": "Setiap Akhir Semester",
+      "category": "Pameran & Inovasi"
+    },
+    {
+      "id": "parade-wisuda",
+      "title": "Parade Wisuda (Graduation Day)",
+      "subtitle": "Apresiasi & Pelepasan Grey Warrior",
+      "badge": "Tradisi & Kekeluargaan",
+      "description": "Perayaan puncak arak-arakan dan pelepasan para wisudawan S1 Teknik Fisika dengan jaket kebanggaan abu-abu, mengiringi langkah para alumni baru menuju gerbang dunia industri.",
+      "period": "3 Kali Setahun (Periode Wisuda)",
+      "category": "Kekeluargaan"
+    },
+    {
+      "id": "kalibrasi",
+      "title": "KALIBRASI (Kaderisasi Mahasiswa)",
+      "subtitle": "Kaderisasi Nilai dan Karakter HMTF",
+      "badge": "Pengembangan Karakter",
+      "description": "Rangkaian pembinaan, penempaan daya juang, dan penanaman nilai kekeluargaan bagi mahasiswa baru agar siap menjadi bagian utuh dari keluarga besar Grey Warrior HMTF.",
+      "period": "Awal Semester Ganjil",
+      "category": "Kaderisasi"
+    },
+    {
+      "id": "tf-sina",
+      "title": "TF SINA (Teknik Fisika Sigap Bencana)",
+      "subtitle": "Aksi Cepat Tanggap Pengabdian Masyarakat",
+      "badge": "Sosial & Lingkungan",
+      "description": "Gerakan tanggap darurat dan penyaluran bantuan sosial kemanusiaan bagi wilayah yang terdampak bencana alam, sekaligus edukasi teknologi pencegahan risiko bencana.",
+      "period": "Insidental & Berkala",
+      "category": "Pengmas"
+    },
+    {
+      "id": "sunmori-sharing",
+      "title": "Sunmori & Sharing Session Adhirajya",
+      "subtitle": "Keakraban & Diskusi Santai Antar-Kader",
+      "badge": "Internalisasi",
+      "description": "Kegiatan santai berkendara pagi (seperti ke Sunrise Point Cukul) yang dipadukan dengan sesi berbagi pengalaman perkuliahan, tips riset, dan rekreasi bersama pengurus.",
+      "period": "Berkala",
+      "category": "Kekeluargaan"
+    }
+  ],
+  "publications": [
+    {
+      "title": "E-Magazine Adhirajya - Edisi Pengenalan",
+      "edition": "Vol. 1 - 2026",
+      "description": "Buletin digital rangkuman visi kedaulatan Adhirajya, perkenalan jajaran kabinet, dan sorotan riset mutakhir mahasiswa Teknik Fisika.",
+      "link": "https://drive.google.com/drive/folders/hmtf-emagazine-placeholder"
+    },
+    {
+      "title": "Panduan & Silabus Keilmuan Grey Warrior",
+      "edition": "Edisi Akademik 2026",
+      "description": "Panduan tips survive perkuliahan S1 Teknik Fisika, pengenalan laboratorium, dan kiat sukses menghadapi Pekan Tubes.",
+      "link": "https://drive.google.com/drive/folders/hmtf-panduan-placeholder"
+    }
+  ]
+}

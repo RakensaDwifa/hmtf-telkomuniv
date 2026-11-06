@@ -1,0 +1,32 @@
+{
+  "name": "HMTF Telkom University",
+  "shortName": "HMTF",
+  "cabinet": "Kabinet Adhirajya",
+  "cabinetSanskrit": "अधिराज्य",
+  "period": "2026",
+  "tagline": "Daya Tercipta, Adhirajya Berjaya",
+  "hashtag": "#VIVATF",
+  "description": "Himpunan Mahasiswa Teknik Fisika Universitas Telkom wadah resmi pengembangan keilmuan, kepemimpinan, dan solidaritas mahasiswa Teknik Fisika.",
+  "established": "5 April 2014",
+  "prodi": "S1 Teknik Fisika",
+  "faculty": "Fakultas Teknik Elektro",
+  "university": "Universitas Telkom Bandung",
+  "contact": {
+    "email": "hmtftelkomuniv@gmail.com",
+    "prodiEmail": "proditf@telkomuniversity.ac.id",
+    "phone": "0811 2025 200 / 0811 2025 300",
+    "address": "Gedung Fakultas Teknik Elektro (FTE), Telkom University, Jl. Telekomunikasi Terusan Buahbatu No. 1, Bandung, Jawa Barat 40257",
+    "instagram": "https://www.instagram.com/hmtftelkomuniv",
+    "instagramProdi": "https://www.instagram.com/tf_telu",
+    "youtube": "https://www.youtube.com/@HMTFTelkomUniversity",
+    "linkedin": "https://www.linkedin.com/company/hmtf-telkom-university"
+  },
+  "navItems": [
+    { "label": "Beranda", "href": "/" },
+    { "label": "BPH Adhirajya", "href": "/bph" },
+    { "label": "Akademik", "href": "/akademik" },
+    { "label": "Event & Galeri", "href": "/event" },
+    { "label": "Aspirasi", "href": "/aspirasi" },
+    { "label": "Tentang Kami", "href": "/tentang-kami" }
+  ]
+}

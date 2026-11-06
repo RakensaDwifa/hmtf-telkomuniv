@@ -1,0 +1,58 @@
+{
+  "prodiTitle": "S1 Teknik Fisika (Physical Engineering)",
+  "faculty": "Fakultas Teknik Elektro (FTE) - Telkom University",
+  "degree": "Sarjana Teknik (S.T.)",
+  "accreditation": "Unggul (BAN-PT / IABEE Certified)",
+  "vision": "Menjadi program studi bertaraf internasional yang unggul dalam riset dan inovasi sains-rekayasa cerdas (Smart Science and Technology) serta berkontribusi nyata pada pembangunan berkelanjutan.",
+  "missions": [
+    "Menyelenggarakan pendidikan teknik fisika berkualitas tinggi berbasis kurikulum integratif dan adaptif.",
+    "Mengembangkan riset di bidang instrumentasi, energi cerdas, material maju, dan sistem rekayasa fisis.",
+    "Mengaplikasikan teknologi tepat guna dalam pengabdian kepada masyarakat dan industri nasional."
+  ],
+  "labs": [
+    {
+      "name": "Laboratorium Sistem Instrumentasi",
+      "short": "Lab Instrumentasi",
+      "focus": "Sensor cerdas, automasi industri, aktuator, kalibrasi sistem pengukuran, IoT & pemrosesan sinyal fisis."
+    },
+    {
+      "name": "Laboratorium Teknik Konversi Energi",
+      "short": "Lab TKE",
+      "focus": "Energi terbarukan, audit energi, manajemen daya, sistem surya (solar cell), bioenergi, dan efisiensi termal."
+    },
+    {
+      "name": "Laboratorium Termodinamika",
+      "short": "Lab Termo",
+      "focus": "Mekanika fluida, perpindahan kalor, siklus refrigerasi, dan pemodelan dinamika termal bangunan/industri."
+    },
+    {
+      "name": "Laboratorium Material",
+      "short": "Lab Material",
+      "focus": "Karakterisasi material fisis, semikonduktor, nanomaterial, polimer rekayasa, dan teknologi fotonik."
+    },
+    {
+      "name": "Laboratorium Sistem Elektronika",
+      "short": "Lab Sistel",
+      "focus": "Embedded systems, mikrokontroler, rangkaian analog-digital terintegrasi, dan instrumentasi biomedis."
+    }
+  ],
+  "coreSubjects": [
+    { "code": "TF2101", "name": "Fisika Komputasi & FEM", "desc": "Pemodelan numerik diferensial, metode elemen hingga, dan simulasi fisika rekayasa." },
+    { "code": "TF2203", "name": "Sistem Instrumentasi & Sensor", "desc": "Prinsip transduser, pengkondisi sinyal, instrumentasi analitis, dan protokol otomasi." },
+    { "code": "TF3102", "name": "Teknik Konversi Energi", "desc": "Termodinamika teknik, teknologi sel surya, turbin angin, dan pemanenan energi (energy harvesting)." },
+    { "code": "TF3204", "name": "Fisika Zat Padat & Material", "desc": "Struktur kristal, pita energi, sifat dielektrik, magnetik, serta semikonduktor modern." },
+    { "code": "TF4101", "name": "Sistem Kendali Otomatik", "desc": "Analisis domain waktu-frekuensi, kestabilan PID, state-space, dan kontroler cerdas." },
+    { "code": "TF4202", "name": "Akustik & Teknik Tata Suara", "desc": "Rambat gelombang akustik, noise control, insulasi suara bangunan, dan audio engineering." }
+  ],
+  "bankSoal": {
+    "title": "Repositori Bank Soal HMTF",
+    "description": "Kumpulan arsip soal ujian tengah semester (UTS), ujian akhir semester (UAS), tugas besar, dan rangkuman materi dari angkatan ke angkatan.",
+    "driveUrl": "https://drive.google.com/drive/folders/hmtf-telkomuniv-banksoal-placeholder",
+    "categories": [
+      { "name": "Tingkat 1 (TPB / Dasar Sains)", "items": ["Kalkulus I & II", "Fisika Dasar I & II", "Kimia Dasar", "Algoritma Pemrograman"] },
+      { "name": "Tingkat 2 (Dasar Keahlian TF)", "items": ["Termodinamika Teknik", "Medan Elektromagnetik", "Rangkaian Listrik", "Metode Numerik"] },
+      { "name": "Tingkat 3 (Keahlian Inti & Peminatan)", "items": ["Sistem Kontrol", "Instrumentasi Industri", "Konversi Energi", "Fisika Material"] },
+      { "name": "Tingkat 4 (Tugas Akhir & Terapan)", "items": ["Pekan Tubes", "Manajemen Proyek Rekayasa", "Kapita Selekta TF"] }
+    ]
+  }
+}
