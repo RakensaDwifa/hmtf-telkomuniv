@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { 
   ShieldCheck, 
   Target, 
@@ -93,22 +94,34 @@ export default function BphPage() {
           {bphData.leadership.map((lead, idx) => (
             <div
               key={idx}
-              className="rounded border border-slate-200 bg-white p-6 flex flex-col justify-between hover:border-slate-400 transition-colors"
+              className="relative overflow-hidden rounded border border-slate-800/90 bg-slate-950 p-6 flex flex-col justify-between hover:border-orange-500/60 transition-all duration-300 group shadow-md min-h-[260px]"
             >
-              <div className="space-y-2">
+              {/* Official Instagram Visual Background with Dark Scrim Overlay */}
+              <div className="absolute inset-0 -z-10 overflow-hidden">
+                <Image
+                  src="/images/bph/bph-card-bg.jpg"
+                  alt={`Latar Belakang Resmi ${lead.role} HMTF`}
+                  fill
+                  className="object-cover object-center brightness-75 contrast-110 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/85 to-slate-900/80" />
+              </div>
+
+              <div className="relative z-10 space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 uppercase">
+                  <span className="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-slate-900/80 text-orange-300 border border-slate-700/80 uppercase">
                     [{lead.category}]
                   </span>
-                  <span className="font-mono text-xs text-orange-600 font-bold">2026</span>
+                  <span className="font-mono text-xs text-orange-400 font-bold">2026</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 pt-1">{lead.role}</h3>
-                <p className="font-mono text-xs text-orange-600 font-semibold">{lead.subtitle}</p>
-                <p className="text-xs text-slate-600 leading-relaxed pt-1">{lead.description}</p>
+                <h3 className="text-lg font-bold text-white pt-1">{lead.role}</h3>
+                <p className="font-mono text-xs text-orange-400 font-semibold">{lead.subtitle}</p>
+                <p className="text-xs text-slate-300 leading-relaxed pt-1">{lead.description}</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 font-mono text-[11px] text-slate-400 flex justify-between">
+              <div className="relative z-10 mt-6 pt-4 border-t border-slate-800/90 font-mono text-[11px] text-slate-400 flex justify-between">
                 <span>HMTF TEL-U</span>
-                <span>MANDAT AKTIF</span>
+                <span className="text-orange-400 font-semibold">MANDAT AKTIF</span>
               </div>
             </div>
           ))}
@@ -133,19 +146,31 @@ export default function BphPage() {
           {bphData.departments.map((dept) => (
             <div
               key={dept.id}
-              className="rounded border border-slate-200 bg-white p-6 flex flex-col justify-between hover:border-slate-400 transition-colors"
+              className="relative overflow-hidden rounded border border-slate-800/90 bg-slate-950 p-6 flex flex-col justify-between hover:border-orange-500/60 transition-all duration-300 group shadow-md min-h-[280px]"
             >
-              <div className="space-y-3">
+              {/* Official Instagram Visual Background with Dark Scrim Overlay */}
+              <div className="absolute inset-0 -z-10 overflow-hidden">
+                <Image
+                  src="/images/bph/bph-card-bg.jpg"
+                  alt={`Latar Belakang Resmi ${dept.name} HMTF`}
+                  fill
+                  className="object-cover object-center brightness-70 contrast-110 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/85 to-slate-900/80" />
+              </div>
+
+              <div className="relative z-10 space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200">
+                  <span className="font-mono text-xs font-bold text-orange-400 bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700/80">
                     {dept.cluster}
                   </span>
                   <span className="font-mono text-[11px] text-slate-400">
                     ID: {dept.id.toUpperCase()}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900">{dept.name}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{dept.desc}</p>
+                <h3 className="text-lg font-bold text-white">{dept.name}</h3>
+                <p className="text-xs text-slate-300 leading-relaxed">{dept.desc}</p>
 
                 <div className="pt-2">
                   <span className="font-mono text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
@@ -155,7 +180,7 @@ export default function BphPage() {
                     {dept.programs.map((prog, i) => (
                       <span
                         key={i}
-                        className="font-mono text-[11px] bg-slate-50 text-slate-700 px-2 py-0.5 rounded border border-slate-200"
+                        className="font-mono text-[11px] bg-slate-900/85 text-slate-200 px-2 py-0.5 rounded border border-slate-700/70"
                       >
                         {prog}
                       </span>
@@ -164,9 +189,9 @@ export default function BphPage() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <div className="relative z-10 mt-6 pt-4 border-t border-slate-800/90 flex items-center justify-between text-[11px] font-mono text-slate-400">
                 <span>RUMPUN: {dept.cluster}</span>
-                <span className="text-orange-600 font-semibold">BPH 2026</span>
+                <span className="text-orange-400 font-semibold">BPH 2026</span>
               </div>
             </div>
           ))}
