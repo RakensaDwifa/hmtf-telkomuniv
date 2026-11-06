@@ -1,17 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050d1a;
-  --foreground: #f8fafc;
-  --hmtf-navy-dark: #050d1a;
-  --hmtf-navy-card: #09172c;
-  --hmtf-navy-border: #132b4f;
-  --hmtf-orange: #e8952f;
-  --hmtf-orange-hover: #d97706;
-  --hmtf-silver: #dce3ed;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --hmtf-navy: #0a1122;
+  --hmtf-navy-surface: #101c38;
+  --hmtf-orange: #ea580c;
+  --hmtf-orange-hover: #c2410c;
+  --hmtf-border: #e2e8f0;
+  --hmtf-border-strong: #cbd5e1;
 }
 
 body {
-  background-color: #050d1a;
-  color: #f8fafc;
+  background-color: #f8fafc;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle blueprint technical dot matrix for editorial headers */
+.bg-tech-grid {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+}
+
+.bg-tech-grid-dark {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
 }

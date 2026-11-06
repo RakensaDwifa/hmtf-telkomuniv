@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageSquare, Send, CheckCircle2, ShieldAlert, Sparkles, Mail } from "lucide-react";
+import { MessageSquare, Send, CheckCircle2, Mail, ArrowUpRight } from "lucide-react";
 import { InstagramIcon } from "@/components/Icons";
 import siteConfig from "@/data/site-config.json";
 
@@ -19,37 +19,36 @@ export default function AspirasiPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.message.trim()) return;
-    // Simulate submission
     setSubmitted(true);
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 space-y-12">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/20 px-3.5 py-1 text-xs font-semibold text-amber-400">
+    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 space-y-12">
+      {/* Editorial Header */}
+      <div className="border-b border-slate-200 pb-8 space-y-3">
+        <div className="flex items-center gap-2 font-mono text-xs text-orange-600 font-bold uppercase tracking-wider">
           <MessageSquare className="h-4 w-4" />
-          <span>Suara Mahasiswa Teknik Fisika</span>
+          <span>PORTAL DISPATCH // KOTAK ASPIRASI 2026</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-          KOTAK <span className="text-amber-400">ASPIRASI</span>
+        <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          KOTAK ASPIRASI <span className="text-orange-600">GREY WARRIOR</span>
         </h1>
-        <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">
-          Wadah terbuka dan transparan bagi seluruh mahasiswa Teknik Fisika untuk menyampaikan gagasan, kritik membangun, keluhan akademik, atau aspirasi fasilitas.
+        <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
+          Saluran resmi komunikasi dua arah untuk menyampaikan evaluasi akademik, usulan fasilitas laboratorium, kritik konstruktif, serta gagasan pengembangan iklim studi S1 Teknik Fisika.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Form Column */}
-        <div className="md:col-span-8 rounded-3xl border border-[#132b4f] bg-[#09172c]/70 p-6 sm:p-8 backdrop-blur-sm">
+        <div className="md:col-span-8 rounded-lg border border-slate-200 bg-white p-6 sm:p-8">
           {submitted ? (
             <div className="py-12 text-center space-y-4">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                <CheckCircle2 className="h-8 w-8" />
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded bg-emerald-50 text-emerald-600 border border-emerald-200">
+                <CheckCircle2 className="h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">Aspirasi Berhasil Terkirim!</h2>
-              <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                Terima kasih atas kontribusimu. Pesanmu telah dicatat dan akan ditinjau secara berkala oleh tim BPH Kabinet Adhirajya untuk ditindaklanjuti.
+              <h2 className="text-xl font-bold text-slate-900">Aspirasi Berhasil Dicatat</h2>
+              <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+                Terima kasih atas kontribusimu. Masukanmu telah masuk ke dalam log rekapitulasi Departemen Aspirasi & Advokasi BPH Kabinet Adhirajya untuk ditindaklanjuti.
               </p>
               <div className="pt-4">
                 <button
@@ -64,53 +63,55 @@ export default function AspirasiPage() {
                       isAnonymous: false,
                     });
                   }}
-                  className="rounded-xl bg-[#09172c] border border-[#132b4f] px-5 py-2 text-xs font-bold text-slate-200 hover:text-white"
+                  className="rounded bg-slate-900 px-4 py-2 text-xs font-mono font-bold text-white uppercase tracking-wider hover:bg-orange-600 transition-colors"
                 >
-                  Kirim Aspirasi Lain
+                  Kirim Aspirasi Baru
                 </button>
               </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Checkbox Anonim */}
-              <div className="rounded-xl border border-[#132b4f] bg-[#050d1a] p-3.5 flex items-center justify-between">
+              <div className="rounded border border-slate-200 bg-slate-50 p-3.5 flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold text-white block">Kirim secara Anonim?</span>
-                  <span className="text-[11px] text-slate-400 block">Identitas nama dan NIM tidak akan ditampilkan</span>
+                  <span className="text-xs font-bold text-slate-900 block">Kirim secara Anonim?</span>
+                  <span className="font-mono text-[11px] text-slate-500 block">
+                    Nama dan NIM tidak akan dicatat di log publik
+                  </span>
                 </div>
                 <input
                   type="checkbox"
                   id="anonymous"
                   checked={formData.isAnonymous}
                   onChange={(e) => setFormData({ ...formData, isAnonymous: e.target.checked })}
-                  className="h-4 w-4 rounded border-[#132b4f] bg-[#050d1a] text-amber-500 focus:ring-amber-500"
+                  className="h-4 w-4 rounded border-slate-300 text-orange-600 focus:ring-orange-500"
                 />
               </div>
 
               {!formData.isAnonymous && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                      Nama Lengkap
+                    <label className="block font-mono text-xs font-semibold text-slate-700 mb-1">
+                      NAMA LENGKAP
                     </label>
                     <input
                       type="text"
-                      placeholder="Masukkan nama..."
+                      placeholder="Nama mahasiswa..."
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none"
+                      className="w-full rounded border border-slate-200 bg-white px-3 py-2 text-xs text-slate-900 placeholder-slate-400 focus:border-slate-900 focus:outline-none font-mono"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                      NIM (Opsional)
+                    <label className="block font-mono text-xs font-semibold text-slate-700 mb-1">
+                      NIM (OPSIONAL)
                     </label>
                     <input
                       type="text"
                       placeholder="1101xxxxxx"
                       value={formData.nim}
                       onChange={(e) => setFormData({ ...formData, nim: e.target.value })}
-                      className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none"
+                      className="w-full rounded border border-slate-200 bg-white px-3 py-2 text-xs text-slate-900 placeholder-slate-400 focus:border-slate-900 focus:outline-none font-mono"
                     />
                   </div>
                 </div>
@@ -118,13 +119,13 @@ export default function AspirasiPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                    Angkatan
+                  <label className="block font-mono text-xs font-semibold text-slate-700 mb-1">
+                    ANGKATAN MAHASISWA
                   </label>
                   <select
                     value={formData.batch}
                     onChange={(e) => setFormData({ ...formData, batch: e.target.value })}
-                    className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                    className="w-full rounded border border-slate-200 bg-white px-3 py-2 text-xs text-slate-900 focus:border-slate-900 focus:outline-none font-mono"
                   >
                     <option value="2026">Angkatan 2026</option>
                     <option value="2025">Angkatan 2025</option>
@@ -135,13 +136,13 @@ export default function AspirasiPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                    Kategori Aspirasi
+                  <label className="block font-mono text-xs font-semibold text-slate-700 mb-1">
+                    KATEGORI BIDANG
                   </label>
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                    className="w-full rounded border border-slate-200 bg-white px-3 py-2 text-xs text-slate-900 focus:border-slate-900 focus:outline-none font-mono"
                   >
                     <option value="Akademik & Perkuliahan">Akademik & Perkuliahan</option>
                     <option value="Fasilitas & Laboratorium">Fasilitas & Laboratorium</option>
@@ -153,25 +154,25 @@ export default function AspirasiPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                  Isi Aspirasi / Masukan / Kritik
+                <label className="block font-mono text-xs font-semibold text-slate-700 mb-1">
+                  ISI PESAN / SARAN / ADVOKASI
                 </label>
                 <textarea
                   rows={5}
                   required
-                  placeholder="Tuliskan pesanmu dengan jelas, objektif, dan konstruktif..."
+                  placeholder="Tuliskan pokok pikiran secara objektif, jelas, dan konstruktif..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full rounded-xl border border-[#132b4f] bg-[#050d1a] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none resize-none"
+                  className="w-full rounded border border-slate-200 bg-white p-3 text-xs text-slate-900 placeholder-slate-400 focus:border-slate-900 focus:outline-none resize-none font-mono"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-orange-400 transition-all active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 rounded bg-slate-900 px-5 py-3 text-xs font-mono font-bold text-white uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-xs"
               >
-                <Send className="h-4 w-4" />
-                <span>Kirim Aspirasi Sekarang</span>
+                <Send className="h-3.5 w-3.5 text-orange-400" />
+                <span>Kirimkan Dokumen Aspirasi</span>
               </button>
             </form>
           )}
@@ -179,39 +180,39 @@ export default function AspirasiPage() {
 
         {/* Sidebar Info Column */}
         <div className="md:col-span-4 space-y-4">
-          <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/70 p-5 space-y-3">
-            <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block">
-              Prinsip Penyaluran
+          <div className="rounded border border-slate-200 bg-white p-5 space-y-2.5">
+            <span className="font-mono text-xs font-bold text-orange-600 uppercase tracking-wider block">
+              // PRINSIP DISPATCH
             </span>
-            <h3 className="text-base font-bold text-white">Kerahasiaan Terjamin</h3>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Seluruh data aspirasi diolah secara etis dan bertanggung jawab. Kami berkomitmen untuk mendengarkan setiap suara demi kemajuan keluarga besar HMTF.
+            <h3 className="text-sm font-bold text-slate-900">Kerahasiaan Terjamin</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Seluruh aspirasi diolah secara independen dan etis. Informasi pribadi tidak akan dibagikan ke pihak mana pun tanpa persetujuan pengirim.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[#132b4f] bg-[#09172c]/70 p-5 space-y-3">
-            <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block">
-              Advokasi Mendesak?
+          <div className="rounded border border-slate-200 bg-slate-50 p-5 space-y-2.5">
+            <span className="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider block">
+              // ADVOKASI DARURAT
             </span>
-            <h3 className="text-base font-bold text-white">Hubungi Kami Langsung</h3>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Jika memerlukan pendampingan akademik atau advokasi darurat, hubungi pengurus melalui kanal resmi:
+            <h3 className="text-sm font-bold text-slate-900">Kontak Langsung BPH</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Untuk urusan pendampingan akademik darurat, hubungi pengurus melalui kanal resmi:
             </p>
-            <div className="space-y-2 pt-1 text-xs">
+            <div className="space-y-2 pt-1 text-xs font-mono">
               <a
                 href={siteConfig.contact.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors"
+                className="flex items-center gap-2 text-slate-700 hover:text-orange-600 transition-colors"
               >
-                <InstagramIcon className="h-3.5 w-3.5 text-amber-400" />
+                <InstagramIcon className="h-3.5 w-3.5 text-orange-600" />
                 <span>DM Instagram @hmtftelkomuniv</span>
               </a>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors"
+                className="flex items-center gap-2 text-slate-700 hover:text-orange-600 transition-colors"
               >
-                <Mail className="h-3.5 w-3.5 text-amber-400" />
+                <Mail className="h-3.5 w-3.5 text-orange-600" />
                 <span>{siteConfig.contact.email}</span>
               </a>
             </div>
