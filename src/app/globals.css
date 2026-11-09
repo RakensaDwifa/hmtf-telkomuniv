@@ -1,27 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --hmtf-navy: #0a1122;
-  --hmtf-navy-surface: #101c38;
+  --background: #050814;
+  --foreground: #f8fafc;
+  --hmtf-navy: #050814;
+  --hmtf-navy-surface: #0b1126;
   --hmtf-orange: #ea580c;
-  --hmtf-orange-hover: #c2410c;
-  --hmtf-border: #e2e8f0;
-  --hmtf-border-strong: #cbd5e1;
+  --hmtf-orange-hover: #f97316;
+  --hmtf-border: #1e293b;
+  --hmtf-border-strong: #334155;
 }
 
 body {
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #050814;
+  color: #f8fafc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle blueprint technical dot matrix for editorial headers */
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050814;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+/* Subtle blueprint technical dot matrix */
 .bg-tech-grid {
   background-size: 24px 24px;
-  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-image: radial-gradient(circle, #334155 1px, transparent 1px);
 }
 
 .bg-tech-grid-dark {
@@ -35,13 +50,17 @@ body {
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(11, 17, 38, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .glass-panel-dark {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(5, 8, 20, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+.neon-glow-orange {
+  box-shadow: 0 0 25px rgba(234, 88, 12, 0.25);
 }

@@ -99,7 +99,7 @@ export default function InteractiveCanvas() {
         // Particle point
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(234, 88, 12, 0.35)"; // orange physics node
+        ctx.fillStyle = "rgba(249, 115, 22, 0.65)"; // vibrant orange physics node
         ctx.fill();
 
         // Connect nearby points
@@ -107,11 +107,11 @@ export default function InteractiveCanvas() {
           const p2 = particles[j];
           const dist2 = Math.hypot(p.x - p2.x, p.y - p2.y);
           if (dist2 < 110) {
-            const alpha = (1 - dist2 / 110) * 0.18;
+            const alpha = (1 - dist2 / 110) * 0.25;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(148, 163, 184, ${alpha})`; // subtle slate linkage
+            ctx.strokeStyle = `rgba(56, 189, 248, ${alpha})`; // cyan cyber energy linkage
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
